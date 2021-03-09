@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameTry-2</title>
+    <link rel = "stylesheet" href="GameTry-2-Style.css">
+    <script src="GameTry-2-Code.js" defer> </script>
+</head>
+<body>
+    <div class="startGame" onclick="startGame()">Press to start</div>
+    <div class="gameField">
+        <div onclick="playerJump()" id="gameField">
+            <div id="player"></div>
+            <div id="block"></div>
+        </div>
+        <p class="score" id="score"></p>
+        <hr>
+        <div class="closeGame">
+            <button onclick="closeGame()">Close</button>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+    </div>
+</body>
+</html>

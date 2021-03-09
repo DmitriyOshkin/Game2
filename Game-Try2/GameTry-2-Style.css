@@ -1,0 +1,75 @@
+html {
+    user-select: none;
+    background-color: rgb(219, 150, 150);
+}
+.closeGame {
+    cursor: pointer;
+    text-align: center;
+}
+.startGame { 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color:rgb(51, 66, 151);
+    width: 100%;
+    height: 200px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+.score {
+    text-align: center;
+    font-size: larger;
+}
+#gameField {
+    cursor: pointer;
+    width: 100%;
+    height: 200px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+#player {
+    width: 20px;
+    height: 50px;
+    background-color: rgb(65, 91, 238);
+    position: relative;
+    top: 150px;
+    left: 1%;
+}
+.animateJump{    
+    animation: playerJump 500ms;
+}
+@keyframes playerJump {
+    0% {top: 150px;}
+    30% {top: 100px;}
+    70% {top: 100px;}
+    100% {top: 150px;}
+}
+#block {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(228, 90, 170);
+    position: relative;
+    top: 130px;
+    left: 99%;
+    animation: moveBlock 2s infinite linear;
+}
+@keyframes moveBlock {
+    0% {left: 99%;}
+    100% {left: 0%;}
+}
+/*.endgame {
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(205, 133, 63, 0.8);
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 5px;
+    color: #ddd;
+    font-size: 2em;
+}*/
