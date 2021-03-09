@@ -1,5 +1,5 @@
 let player = document.getElementById("player");
-let block = document.getElementById("block");
+let stone = document.getElementById("stone");
 let point;
 document.querySelector(".gameField").style.display = "none";
 
@@ -23,11 +23,11 @@ function playerJump() {
 let checkDead = setInterval(function() {
     let playerTop = 
     parseInt(window.getComputedStyle(player).getPropertyValue('top'));
-    let blockLeft = 
-    parseInt(window.getComputedStyle(block).getPropertyValue('left'));
-    if (blockLeft<20 && playerTop>130) {
-        //block.style.animation = 'none';
-        block.style.display = 'none';
+    let stoneLeft = 
+    parseInt(window.getComputedStyle(stone).getPropertyValue('left'));
+    if (stoneLeft<20 && playerTop>130) {
+        //stone.style.animation = 'none';
+        stone.style.display = 'none';
 
         alert(`You score: ${point++} points`); // ${Math.floor(point++ /200)}
     } else {
@@ -35,8 +35,8 @@ let checkDead = setInterval(function() {
     }
 }, 10);
 function resetGame() {
-    //block.style.animation = 'block';
-    block.style.display = 'block';
-    block.classList.add('moveBlock');
+    //stone.style.animation = 'block';
+    stone.style.display = 'block';
+    stone.classList.add('moveBlock');
     point = 0;
 }
